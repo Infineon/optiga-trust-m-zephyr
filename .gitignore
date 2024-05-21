@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2023 Infineon Technologies AG
+# SPDX-License-Identifier: CC0-1.0
+
+# cmake build artifacts
+_deps
+.ninja_deps
+.ninja_log
+[Bb]uild
+*-config-version.cmake
+*-config.cmake
+*-targets.cmake
+*.ninja
+*.sln
+*.user
+*.vcxproj
+*.vcxproj.filters
+cmake_install.cmake
+CMakeCache.txt
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+CMakeFiles
+CMakeScripts
+compile_commands.json
+CTestTestfile.cmake
+DartConfiguration.tcl
+Debug
+docs/*.tag
+docs/html
+Doxyfile
+install_manifest.txt
+Makefile
+Release
+Testing
+coverage/*
+coverage.xml
+coverage-sources.zip
+.spelling-errors.txt
+
+# c build artifacts
+*.a
+*.d
+*.dll
+*.dylib
+*.elf
+*.gch
+*.ko
+*.la
+*.lib
+*.lo
+*.o
+*.obj
+*.pch
+*.so
+*.so.*
+
+# c++ build artifacts
+*.app
+*.exe
+*.lai
+*.mod
+*.out
+*.smod

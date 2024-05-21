@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2024 Infineon Technologies AG
+# SPDX-License-Identifier: CC0-1.0
+
+Checks: '-*,bugprone-*,-bugprone-suspicious-string-compare,misc-*,-bugprone-easily-swappable-parameters,readability-*,-readability-magic-numbers'
+CheckOptions:
+  - { key: readability-identifier-naming.EnumCase, value: lower_case }
+  - { key: readability-identifier-naming.FunctionCase, value: lower_case }
+  - { key: readability-identifier-naming.GlobalConstantCase, value: lower_case }
+  - { key: readability-identifier-naming.MacroDefinitionCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.MacroDefinitionIgnoredRegexp, value: .+_H_ }
+  - { key: readability-identifier-naming.MemberCase, value: lower_case }
+  - { key: readability-identifier-naming.NamespaceCase, value: lower_case }
+  - { key: readability-identifier-naming.ParameterCase, value: lower_case }
+  - { key: readability-identifier-naming.StructCase, value: lower_case }
+  - { key: readability-identifier-naming.TypedefCase, value: lower_case }
+  - { key: readability-identifier-naming.VariableCase, value: lower_case }
+WarningsAsErrors: '*'

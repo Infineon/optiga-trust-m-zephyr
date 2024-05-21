@@ -1,0 +1,32 @@
+/*
+ * Copyright (c) 2024 Infineon Technologies AG
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+ /*
+  * Given as example to demonstrate custom device tree overlays and assignment of board-specific GPIO.
+  */
+/ {
+	aliases {
+		optiga-i2c = &i2c0;
+        optiga-reset = &reset_gpio;
+        optiga-vdd = &vdd_gpio;
+	};
+
+	optiga_gpios {
+        compatible = "gpio-keys";
+        reset_gpio: pin_reset {
+            gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
+            label = "RESET GPIO";
+        };
+        vdd_gpio: pin_vdd {
+            gpios = <&gpio0 18 GPIO_ACTIVE_LOW>;
+            label = "VDD GPIO";
+        };
+    };
+};
+
+&i2c0 {
+	clock-frequency = <I2C_BITRATE_FAST>;
+};

@@ -1,0 +1,33 @@
+/*
+ * Copyright (c) 2024 Infineon Technologies AG
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+ /*
+  * Used as platform for building the application with Clang for static code analysis (e.g. clang-tidy)
+  */
+/ {
+	aliases {
+		optiga-i2c = &i2c0;
+        optiga-reset = &reset_gpio;
+        optiga-vdd = &vdd_gpio;
+        sw1 = &switch;
+	};
+
+	optiga_gpios {
+        compatible = "gpio-keys";
+        reset_gpio: pin_reset {
+            gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
+            label = "RESET GPIO";
+        };
+        vdd_gpio: pin_vdd {
+            gpios = <&gpio0 18 GPIO_ACTIVE_LOW>;
+            label = "VDD GPIO";
+        };
+        switch: pin_switch {
+            gpios = <&gpio0 1 GPIO_ACTIVE_LOW>;
+            label = "Switch";
+        };
+    };
+};
